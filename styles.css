@@ -1,13 +1,13 @@
 /* Your Styles Here */
 body {
   background-color: #403450;
-  font-size: large;
+  font-size: x-large;
   font-family: "Poppins", sans-serif ;
   font-weight: 390;
 }
 /* #ba87fc for light them*/
 .bar {
-    width: 80%;
+    width: 75%;
     border: 1px solid #251c32;
 
 }
@@ -17,21 +17,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
-  width: 200px;
-  padding-top: 25px;
+  height: 400px;
+  width: 400px;
+  padding-top: 100px;
   /* border: 3px solid green; */
 }
 
 img {
   border: 2px solid plum;
-  width: 150px;
+  width: 275px;
   border-radius: 50%;
 }
 
 .details {
   margin: auto;
-  width: 40%;
+  width: 50%;
   color: whitesmoke;
   border: 1px solid #251c32;
   background-color: #251c32;
@@ -42,4 +42,13 @@ p {
   margin: 0;
   padding: 0;
   color: #C3B1E1
+}
+
+.menu-buttons {
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  padding: 3px;
+  max-width: 150px;
 }
