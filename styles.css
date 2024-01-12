@@ -23,7 +23,7 @@ body {
   /* border: 3px solid green; */
 }
 
-img {
+.pfp {
   border: 2px solid plum;
   width: 275px;
   border-radius: 50%;
@@ -31,7 +31,7 @@ img {
 
 .details {
   margin: auto;
-  width: 50%;
+  width: 950px;
   color: whitesmoke;
   border: 1px solid #251c32;
   background-color: #251c32;
@@ -47,8 +47,68 @@ p {
 .menu-buttons {
   margin: auto;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   display: flex;
   padding: 3px;
-  max-width: 150px;
+  padding-right: 10px;
+  max-width: 500px;
+  /* border: 1px solid black; */
+}
+
+button {
+  background-color: #251c32;
+  color: #C3B1E1;
+  padding: 5px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+button:hover {
+  background-color: #100b16;
+}
+
+.icons {
+  width: 200px;
+}
+
+.piano {
+  width: 250px;
+}
+
+.pic-gallery {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 400px;
+  width: 500px;
+  padding-top: 100px;
+  padding-left: 50px;
+}
+
+.hobby-pic-gallery {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 400px;
+  width: 450px;
+  padding-top: 100px;
+  padding-right: 15px;
+}
+
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-25deg);
+  }
+}
+.ani-pic {
+  animation: rotation 1s infinite step-end;
 }
