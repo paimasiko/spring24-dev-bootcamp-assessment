@@ -4,7 +4,15 @@ body {
   font-size: x-large;
   font-family: "Poppins", sans-serif ;
   font-weight: 390;
+  transition-duration: 0.3s;
 }
+
+.body-light {
+  /* background-color: #a793c7 ; */
+  background-color: #C3B1E1;
+  transition-duration: 0.3s;
+}
+
 /* #ba87fc for light them*/
 .bar {
     width: 75%;
@@ -19,12 +27,12 @@ body {
   align-items: center;
   height: 400px;
   width: 400px;
-  padding-top: 100px;
+  padding-top: 50px;
   /* border: 3px solid green; */
 }
 
 .pfp {
-  border: 2px solid plum;
+  border: 2px solid #251c32;
   width: 275px;
   border-radius: 50%;
 }
@@ -32,16 +40,31 @@ body {
 .details {
   margin: auto;
   width: 950px;
-  color: whitesmoke;
   border: 1px solid #251c32;
   background-color: #251c32;
   padding: 1%;
+  transition-duration: 0.3s;
+}
+
+.light-details {
+  background-color: #C3B1E1;
+  margin: auto;
+  width: 950px;
+  border: 3px ridge #251c32;
+  padding: 1%;
+  transition-duration: 0.3s;
 }
 
 p {
   margin: 0;
   padding: 0;
-  color: #C3B1E1
+  color: #C3B1E1;
+  transition-duration: 0.3s;
+}
+
+.light-p {
+  color: #251c32;
+  transition-duration: 0.3s;
 }
 
 .menu-buttons {
@@ -56,8 +79,25 @@ p {
 }
 
 button {
-  background-color: #251c32;
+  background-color: #251c32;;
   color: #C3B1E1;
+  padding: 5px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+#dark-light-toggle-button {
+  margin: auto;
+  display: flex;
+  margin-top: 15px;
+}
+
+.light-button {
+  background-color: #C3B1E1;
+  color: #251c32;
   padding: 5px 16px;
   text-align: center;
   text-decoration: none;
@@ -68,6 +108,10 @@ button {
 
 button:hover {
   background-color: #100b16;
+}
+
+.light-button:hover {
+  background-color: #75648d;
 }
 
 .icons {
@@ -84,8 +128,8 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   height: 400px;
-  width: 500px;
-  padding-top: 100px;
+  width: 600px;
+  padding-top: 50px;
   padding-left: 50px;
 }
 
@@ -95,9 +139,42 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   height: 400px;
-  width: 450px;
-  padding-top: 100px;
+  width: 600px;
+  padding-top: 50px;
   padding-right: 15px;
+}
+
+.poke {
+  width: 450px;
+  left: -600px;
+  animation: slide 1s forwards;
+}
+
+.poke2 {
+  animation: slide2 1s forwards;
+}
+
+
+@keyframes slide {
+  from {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}
+
+@keyframes slide2 {
+  from {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0%);
+		opacity: 1;
+	}
 }
 
 
@@ -111,4 +188,9 @@ button:hover {
 }
 .ani-pic {
   animation: rotation 1s infinite step-end;
+}
+
+.tim {
+  width: 270px;
+  border: 3px groove #251c32;
 }
