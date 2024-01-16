@@ -1,90 +1,74 @@
-// let x = document.getElementById("moveable-div");
-
-
-
-// divdrag(x);
-
-
-// function divdrag(div) {
-//     var p1 = 0
-//     var p2 = 0
-//     var p3 = 0
-//     var p4 = 0
-
-//     div.onmousedown = dmousedrag  
-// }
-// function dmousedrag(e) {
-//     e = window.Event
-//     p3 = e.clientX;
-//     p4 = e.clientY;
-//     document.onmouseup = dclosediv;
-//     document.onmousemove = dragdiv;
-// }
-// function dragdiv(d) {
-//     d = window.Event
-//     p3 = d.clientX
-//     p4 = d.clientY
-//     x.style.top = (x.offsetTop - (p4 - d.clientY) + "px");
-//     x.style.left = (x.offsetLeft - (p3 - d.clientX) + "px");
-// }
-// function dclosediv() {
-//     document.onmouseup = null;
-//     document.onmousemove = null;
-// }
-
-
-// const movediv = document.("")
-
-// divs.addEventListener("mousedown",)
-
-// function mousemovement() {
-
-// }
-
 const movediv = document.getElementById("moveable-div");
-
-let offset1 = movediv.style.left;
-let offset2 = movediv.style.right;
-console.log(offset2.toString)
-let mousePX
-let mousePY
-let mousedown = false;
-
-
-// movediv.addEventListener("mousedown", () => {
-//     movediv.addEventListener("mousemove", drag);
-// });
-// document.addEventListener("mouseup", () => {
-//     movediv.removeEventListener("mousemove", drag);
-// });
+const togglebutton = document.getElementById("dark-light-toggle-button");
+var lightmode = false;
+var theme = localStorage.getItem("theme");
+const body = document.body;
+const details = document.querySelector(".details");
+const d = body.querySelector("p");
+const button = document.querySelectorAll("button");
+const secret = document.getElementById("secret");
 
 
-// function drag({ movementX, movementY }) {
-//     let movedivStyle = window.getComputedStyle(movediv);
-//     movediv.style.left = parseInt(movedivStyle.left) + movementX + "px";
-//     movediv.style.top = parseInt(movedivStyle.top)  + movementY + "px";
-// }
 
-movediv.style.marginLeft = "auto"
-movediv.style.marginRight = "auto"
-movediv.addEventListener("mousedown", (e) => {
-    mousedown = true;
-    offset1 = movediv.offsetLeft - e.clientX
-    offset2 = movediv.offsetTop - e.clientY
-    
-}, true);
+if (secret) {
+    secret.addEventListener("input", anything = function(e){
+        if (secret.value == "guitar") {
+            const furret = document.createElement("img");
+            const profile = document.querySelector(".profile")
+            furret.src = "images/furret.gif";
+            furret.classList.add("poke")
+            const mypfp = document.querySelector(".pfp");
+            furret2 = furret.cloneNode(false);
+            furret2.classList.add("poke2")
+            profile.insertBefore(furret, mypfp);
+            profile.appendChild(furret2);
+            secret.removeEventListener("input", anything)
+        }   
+    });
+}
 
-document.addEventListener("mouseup", () => {
-    mousedown = false;
-}, true);
 
-document.addEventListener("mousemove", (env) => {
-    env.preventDefault();
-    if (mousedown) {
-        mousePX = env.clientX;
-        mousePY = env.clientY;
-        movediv.style.left = (mousePX + offset1) + 'px';
-        movediv.style.top = (mousePY + offset2) + 'px';
-        
+
+
+
+if (theme == "light") {
+    body.classList.toggle("body-light");
+    details.classList.toggle("light-details");
+    d.classList.toggle("light-p");
+    button.forEach(element => {
+        element.classList.toggle("light-button")
+    });
+    if (movediv) {
+        movediv.classList.toggle("light-moveable-box")
     }
-}, true);
+    togglebutton.innerHTML = ("Toggle dark mode");
+    lightmode = true;
+} else {
+    togglebutton.innerHTML = ("Toggle light mode");
+    lightmode = false;
+}
+
+
+togglebutton.addEventListener("click", () => {
+    body.classList.toggle("body-light");
+    details.classList.toggle("light-details");
+    d.classList.toggle("light-p");
+    button.forEach(element => {
+        element.classList.toggle("light-button")
+    });
+    if (movediv) {
+        movediv.classList.toggle("light-moveable-box")
+    }
+
+    if (!lightmode) {
+        togglebutton.innerHTML = ("Toggle dark mode");
+        lightmode = true;
+        localStorage.setItem('theme', 'light');
+    } else {
+        togglebutton.innerHTML = ("Toggle light mode");
+        lightmode = false;
+        localStorage.setItem('theme', 'dark');
+    }
+    
+    
+});
