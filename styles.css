@@ -157,7 +157,7 @@ button:hover {
 
 @keyframes slide {
   from {
-		transform: translateX(-100%);
+		transform: translateX(-70%);
 		opacity: 0;
 	}
 	to {
@@ -168,11 +168,11 @@ button:hover {
 
 @keyframes slide2 {
   from {
-		transform: translateX(100%);
+		transform: translateX(70%) scaleX(-1);
 		opacity: 0;
 	}
 	to {
-		transform: translateX(0%);
+		transform: translateX(0%) scaleX(-1);;
 		opacity: 1;
 	}
 }
@@ -214,7 +214,7 @@ button:hover {
   user-select: none;
   cursor: move;
   position: absolute;
-  transform: translate(550%, 20%);
+  transform: translate(300%, 20%);
 }
 
 .light-moveable-box {

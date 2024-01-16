@@ -19,6 +19,8 @@ if (secret) {
             furret.classList.add("poke")
             const mypfp = document.querySelector(".pfp");
             furret2 = furret.cloneNode(false);
+            // transform: scaleX(-1);
+            furret2.style.transform = "scaleX(-1)";
             furret2.classList.add("poke2")
             profile.insertBefore(furret, mypfp);
             profile.appendChild(furret2);
