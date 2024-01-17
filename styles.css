@@ -210,11 +210,12 @@ button:hover {
   justify-content: center;
   border: 2px outset #251c32 ;
   cursor: move;
-  -webkit-user-select: none;
-  user-select: none;
+  /* -webkit-user-select: none;
+  user-select: none; */
   cursor: move;
   position: absolute;
-  transform: translate(300%, 20%);
+  transform: translate(300%, 350%);
+  z-index: 10;
 }
 
 .light-moveable-box {
